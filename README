@@ -76,3 +76,8 @@
 	
 	Alternatively you can execute the application in IDE
 	
+	There are two prepared messenger implementations in the repository 
+	to be used for testing:
+
+		 messenger-1.jar
+		 messenger-2.jar	
