@@ -1,0 +1,89 @@
+1. Prerequisites
+
+	JAVA 8+
+	IDE (optional)
+	Maven (optional)
+
+
+1. Build
+
+	You can build the project with maven as: "mvn package" or with IDE (Eclipse project prepared)
+	
+	Alternatively you can just copy prepared application jar file: epam-0.0.1-SNAPSHOT.jar
+
+2. API
+
+	The following REST APIs are supported:
+	
+		1.	Add new messenger service (dynamic class loading, been registration)
+	  
+	  		Parameters:
+	  
+		  		URL:    /messengers/add
+		  		
+		  		Input Body:
+		  		 		  					  		
+						{
+						    "location":"location",     	// class/s location. Path to the jar file or directory
+						    "className":"class name",	// fully qualified class name 
+						    "messengerName":"Messenger name"	// desired name to be registered 
+						}	     
+	  			
+	  			There are two prepared messenger implementations in the repository 
+	  			to be used for testing:
+	  			
+	  				 messenger-1.jar
+	  				 messenger-2.jar
+	  			
+	  
+		2. Sent message
+	  
+		  	Parameters:
+		  	
+		  		URL:	/messengers/send
+		  		
+		  		Input Body:
+		  		 
+						{
+						    "message":"message",     	// name to be sent
+						    "messengerName":"messenger name",	// registered messenger name 
+						}
+	  			  
+		3. Get all messengers
+
+		  	Parameters:
+		  	
+		  		URL:	/messengers/all
+		  		
+		  		Output (as output the instance of MessenegrList.classis returned):
+		  		
+					{
+					    "count": "count",	// number of registered messengers
+					    "messengers": [		// list of registered messengers
+					        {
+					        	"beanName": "messenger bean name",
+					        	"className": "implementation class",
+					        	"loadFrom": "location the messenger class loaded from"
+					        },
+					        ...
+					    ]
+					}		  			 
+					
+3. Execution
+
+	You can start the application from the command line as:
+	
+		java -jar {path}/epam-0.0.1-SNAPSHOT.jar
+	
+	or build and start as:
+	
+		mvn spring-boot:run
+	
+	Alternatively you can execute the application in IDE
+	
+	There are two prepared messenger implementations in the repository 
+	to be used for testing:
+	
+		 messenger-1.jar
+		 messenger-2.jar
+	
