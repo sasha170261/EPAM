@@ -55,7 +55,7 @@
 		  	
 		  		URL:	/messengers/all
 		  		
-		  		Output (as output the instance of MessenegrList.classis returned):
+		  		Output (as output the instance of MessenegrList.classis is returned):
 		  		
 					{
 					    "count": "count",	// number of registered messengers
