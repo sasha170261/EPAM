@@ -20,7 +20,7 @@ import lombok.extern.log4j.Log4j2;
 
 /**
  * class MessengerController
- * test-kuku
+ * test-kuku-1
  */
 @Log4j2
 @RestController
