@@ -20,7 +20,8 @@ import lombok.extern.log4j.Log4j2;
 
 /**
  * class MessengerController
- * test-kuku-1
+ * 
+ * test-1.1
  */
 @Log4j2
 @RestController
@@ -38,8 +39,6 @@ public class MessengerController
    * 
    * @param request
    * @return ResponseEntity
-   * 
-   * test-update-1.1
    */
   @PostMapping(value = "/messengers/send")
   public ResponseEntity<String> sendMessage(@RequestBody SendRequest request)
