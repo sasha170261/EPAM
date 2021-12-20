@@ -21,7 +21,7 @@ import lombok.extern.log4j.Log4j2;
 /**
  * class MessengerController
  * 
- * test-5-1.2
+ * test-6
  */
 @Log4j2
 @RestController
