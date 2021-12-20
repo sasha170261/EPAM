@@ -39,7 +39,7 @@ public class MessengerController
    * @param request
    * @return ResponseEntity
    * 
-   * test-update-1
+   * test-update
    */
   @PostMapping(value = "/messengers/send")
   public ResponseEntity<String> sendMessage(@RequestBody SendRequest request)
