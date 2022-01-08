@@ -20,8 +20,7 @@ import lombok.extern.log4j.Log4j2;
 
 /**
  * class MessengerController
- * 
- * test-8
+ *
  */
 @Log4j2
 @RestController
